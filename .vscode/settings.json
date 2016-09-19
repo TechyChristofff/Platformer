@@ -8,6 +8,7 @@
          "**/*.cs.meta": true,
          "**/*.meta":true,
          "**/**/*.cs.meta":true,
-         "**/**/**/*.prefab":true
+         "**/**/**/*.prefab":true,
+         "**/**/*.asset":true
     }
 }
