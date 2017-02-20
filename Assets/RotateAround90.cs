@@ -19,7 +19,7 @@ public class RotateAround90 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _moving = Moving.none;
-        maxSpeed = 0.0f
+        maxSpeed = 0.0f;
 	}
 	
 	// Update is called once per frame
@@ -30,7 +30,7 @@ public class RotateAround90 : MonoBehaviour {
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
-            RotateObjectFunc(RotateObject.transform.position, Vector3.up, 90, 50000);
+            RotateObjectFunc(RotateObject.transform.position, Vector3.up, 90, 0);
         }
 
         

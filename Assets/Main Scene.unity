@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateObject: {fileID: 1956242759}
+  maxSpeed: 15
 --- !u!1 &923912774
 GameObject:
   m_ObjectHideFlags: 0
