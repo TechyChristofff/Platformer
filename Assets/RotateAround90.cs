@@ -6,6 +6,7 @@ public class RotateAround90 : MonoBehaviour {
 
 
     public GameObject RotateObject;
+    public GameObject Lookobject;
     enum Moving
     {
         none,
@@ -24,16 +25,21 @@ public class RotateAround90 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("Right Button"))
         {
-            //this.transform.RotateAround(RotateObject.transform.position, Vector3.up, 90);
+            RotateObjectFunc(RotateObject.transform.position, Vector3.up, -90, 0);
         }
-        else if (Input.GetKeyDown(KeyCode.E))
+        else if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Left Button"))
         {
             RotateObjectFunc(RotateObject.transform.position, Vector3.up, 90, 0);
         }
 
         
+    }
+
+    private void LateUpdate()
+    {
+        this.transform.LookAt(Lookobject.transform);
     }
 
     private void RotateObjectFunc(Vector3 point, Vector3 axis, float rotateAmount, float rotateTime)
